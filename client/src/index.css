@@ -4,8 +4,16 @@ body {
   font-family: sans-serif;
   background-color: #f2f2f2;
 }
-
+.movie-list {
+  display: flex;
+  flex-direction: column;
+}
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
 .movie-card {
+  width: 95%;
   background-color: #fff;
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
@@ -39,6 +47,16 @@ body {
 .saved-list h3 {
   margin-right: 10px;
 }
+.saved-list a {
+  color: #747070;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.saved-list a.active {
+  color: #1c5d76;
+  font-weight: bold;
+}
 
 .saved-movie {
   margin: 0 10px;
@@ -60,8 +78,23 @@ body {
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
+  cursor: pointer;
 }
 .save-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.remove-button {
+  position: absolute;
+  top: 75px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+  cursor: pointer;
+}
+.remove-button:hover {
   background-color: green;
   color: white;
 }
